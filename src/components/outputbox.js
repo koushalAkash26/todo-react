@@ -1,7 +1,6 @@
 import React from 'react'
-// import { BsFillPinAngleFill } from 'react-icons/bs';
-// import { BsCheckLg } from 'react-icons/bs';
 import Icontoggler from './icontoggler'
+import DeleteTodo from './deleteTodo'
 
 
 
@@ -11,13 +10,10 @@ function Outputbox({collection,signal}) {
     if(signal){
     return (
         <div>
-            {collection.map((todo)=><div><Icontoggler></Icontoggler> {todo}</div>)}
+            {collection.map((todo)=><div key={todo.taskid}><Icontoggler></Icontoggler> {todo.taskname}<DeleteTodo id={todo.task}></DeleteTodo></div>)}
             
         </div>
-        // <div>
-        //    <div> <BsFillPinAngleFill></BsFillPinAngleFill>   {props.coll} </div>
-        //    {/* <div>{props.activity}</div> */}
-        // </div>
+        
     )
     }
     else{

@@ -1,8 +1,7 @@
-.active{
+.toggleicon{
     width:24px;
     display:inline !important;
 }
-.inactive{
+.deleteicon{
     width:24px;
-    display:inline !important;
 }

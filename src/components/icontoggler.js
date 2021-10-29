@@ -14,14 +14,14 @@ function Icontoggler() {
         <>
             {active ? (
           <img
-            className={style.active}
+            className={style.toggleicon}
             src={Active}
             alt="tick"
             onClick={ handleChangeActive}
           />
         ) : (
           <img
-            className={style.inactive}
+            className={style.toggleicon}
             src={Inactive}
             alt="pin"
             onClick={ handleChangeActive}
