@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/todo-react/static/css/main.1ef4d05f.chunk.css",
+    "main.js": "/todo-react/static/js/main.9c7c4aa4.chunk.js",
+    "main.js.map": "/todo-react/static/js/main.9c7c4aa4.chunk.js.map",
+    "runtime-main.js": "/todo-react/static/js/runtime-main.c682d177.js",
+    "runtime-main.js.map": "/todo-react/static/js/runtime-main.c682d177.js.map",
+    "static/js/2.de09b430.chunk.js": "/todo-react/static/js/2.de09b430.chunk.js",
+    "static/js/2.de09b430.chunk.js.map": "/todo-react/static/js/2.de09b430.chunk.js.map",
+    "static/js/3.97e3d9c1.chunk.js": "/todo-react/static/js/3.97e3d9c1.chunk.js",
+    "static/js/3.97e3d9c1.chunk.js.map": "/todo-react/static/js/3.97e3d9c1.chunk.js.map",
+    "index.html": "/todo-react/index.html",
+    "static/css/main.1ef4d05f.chunk.css.map": "/todo-react/static/css/main.1ef4d05f.chunk.css.map",
+    "static/js/2.de09b430.chunk.js.LICENSE.txt": "/todo-react/static/js/2.de09b430.chunk.js.LICENSE.txt",
+    "static/media/accept.e7f61d7e.png": "/todo-react/static/media/accept.e7f61d7e.png",
+    "static/media/logo.6ce24c58.svg": "/todo-react/static/media/logo.6ce24c58.svg",
+    "static/media/push-pin.ecd211c6.png": "/todo-react/static/media/push-pin.ecd211c6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c682d177.js",
+    "static/js/2.de09b430.chunk.js",
+    "static/css/main.1ef4d05f.chunk.css",
+    "static/js/main.9c7c4aa4.chunk.js"
+  ]
+}
