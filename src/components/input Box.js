@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Outputbox from './outputbox'
 import { v4 as uuidv4 } from 'uuid';
 
@@ -9,6 +9,10 @@ function InputBox() {
    const[state,setState]=useState(false)
   
    const[list,setList]=useState([])
+   useEffect(()=>{
+       console.log(list)
+   },[list])
+
    const creator=()=>{
        setState(true)
        console.log(task)
