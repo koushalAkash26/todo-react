@@ -1,6 +1,6 @@
 .toggleicon{
     width:24px;
-    display:inline;
+    display:inline !important;
 }
 .deleteicon{
     width:24px;
