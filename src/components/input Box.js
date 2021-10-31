@@ -29,7 +29,7 @@ function InputBox() {
            <button onClick={creator}>ADD</button>
           
            {/* {state && <Outputbox collection={list}></Outputbox>} */}
-           <Outputbox collection={list} signal={state}></Outputbox>
+           <Outputbox collection={list} signal={state} setList={setList}></Outputbox>
            
            
 
