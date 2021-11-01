@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import Inactive from "../images/push-pin.png";
 import Active from "../images/accept.png";
-import style from './appStyle.module.css'
+import style from './appStyle.module.css';
+
 
 function Icontoggler() {
     const [active, setActive] = useState(false);

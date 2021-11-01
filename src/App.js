@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import InputBox from './components/input Box'
+import Skeleton from './components/skeleton'
 
 function App() {
   return (
     <div className="App">
-      <InputBox></InputBox>
+      <Skeleton></Skeleton>
       
     </div>
   );
