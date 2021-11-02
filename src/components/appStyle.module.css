@@ -1,3 +1,20 @@
+body{
+    background-color: rgb(96,95,109)
+}
+.mainContainer{
+    margin:50px;
+    border: 4px solid;
+    border-radius: 4px;
+    background-color: rgb(55,58,93);
+}
+.mainHeading{
+    display:inline;
+
+}
+.titleicon{
+    width:35px;
+
+}
 .toggleicon{
     width:24px;
     display:inline !important;
@@ -6,5 +23,5 @@
     width:23px;
 }
 .editicon{
-    width:23px; 
+    width:13px; 
 }

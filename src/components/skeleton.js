@@ -31,8 +31,8 @@ function Skeleton() {
     return (
         <div>
             <div>
-            <input value={todo} onChange={(e)=>setTodo(e.target.value)}></input>
-           <button onClick={creator}>ADD</button>
+            <input value={todo} onChange={(e)=>setTodo(e.target.value)} placeholder="enter a task"></input>
+           {!edit ?<button onClick={creator}>ADD</button>:<button onClick={creator}>change</button>}
            </div>
            {todos.map((todo)=><div key={todo.taskid}><Icontoggler></Icontoggler><p style={{display:"inline"}}>{todo.task}</p><Cancel collection={todos} setTodos={setTodos} id={todo.taskid} setEdit={setEdit}></Cancel></div>)}
         </div>   
