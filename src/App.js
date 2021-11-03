@@ -8,13 +8,13 @@ function App() {
   return (
     <div className="App">
       <section className={style.mainContainer}>
-      <img
+        <div className={style.headContainer}><img
             className={style.titleicon}
             src={Book}
             alt="tick"
             // onClick={ handleChangeActive}
           />
-        <h1>Todo List</h1>  
+        <p className={style.mainHeading}>Todo List</p>  </div>
       <Skeleton></Skeleton>
       </section> 
     </div>

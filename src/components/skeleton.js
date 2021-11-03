@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import Icontoggler from './togglericon'
 import Cancel from './cancel'
+import styles from './appStyle.module.css'
 
 function Skeleton() {
     const[todo,setTodo]=useState("")
@@ -30,11 +31,11 @@ function Skeleton() {
     }
     return (
         <div>
-            <div>
-            <input value={todo} onChange={(e)=>setTodo(e.target.value)} placeholder="enter a task"></input>
-           {!edit ?<button onClick={creator}>ADD</button>:<button onClick={creator}>change</button>}
-           </div>
-           {todos.map((todo)=><div key={todo.taskid}><Icontoggler></Icontoggler><p style={{display:"inline"}}>{todo.task}</p><Cancel collection={todos} setTodos={setTodos} id={todo.taskid} setEdit={setEdit}></Cancel></div>)}
+
+            <input value={todo} onChange={(e)=>setTodo(e.target.value)} placeholder="enter a task" className={!edit ? styles.searchBox:styles.searchBoxnotify}></input>
+           {!edit ?<button className={styles.button} onClick={creator}>ADD</button>:<button className={styles.button2} onClick={creator}>change</button>}
+           
+           {todos.map((todo)=><div className={styles.todos} key={todo.taskid}><Icontoggler></Icontoggler><p className={styles.content}>{todo.task}</p><Cancel collection={todos} setTodos={setTodos} id={todo.taskid} setEdit={setEdit}></Cancel></div>)}
         </div>   
             
     
