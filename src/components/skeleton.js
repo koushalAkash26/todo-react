@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import Icontoggler from './togglericon'
 import Cancel from './cancel'
@@ -6,7 +6,10 @@ import styles from './appStyle.module.css'
 
 function Skeleton() {
     const[todo,setTodo]=useState("")
-    const[todos,setTodos]=useState([])
+    const[todos,setTodos]=useState(()=>{
+        const localData=localStorage.getItem('todos')
+        return localData? JSON.parse(localData):[]
+    })
     const[edit, setEdit]=useState(null)
     console.log(edit)
     const updateTodo=(id)=>{
@@ -29,6 +32,10 @@ function Skeleton() {
         }
         
     }
+    useEffect(() => {
+        localStorage.setItem('todos',JSON.stringify(todos))
+    }, [todos])
+    
     return (
         <div>
 
