@@ -21,16 +21,16 @@ body{
 .searchBox{
     border-radius: 5px;
     width:30%;
-    height:25px;
+    height:30px;
     font-size: 13px;
     border:none;
     font-family: 'Varela Round', sans-serif;
 }
 .searchBoxnotify{
     border-radius: 5px;
-    width:30%px;
-    font-size: 13px;
-    height:25px;
+    width:30%;
+    font-size: 20px;
+    height:30px;
     border:none;
     box-shadow: 0 0 2.5px 2.5px red;
     font-family: 'Varela Round', sans-serif;
@@ -43,7 +43,7 @@ body{
     margin-top: 0px;
     margin-right: 5px;
     margin-left: 5px;
-    height:25px;
+    height:30px;
     font-weight: 700;
     font-family: 'Varela Round', sans-serif;
     background-color:rgb(255,255,255);
@@ -51,12 +51,12 @@ body{
 .button2{
     border-radius: 5px;
     border:none;
-    font-size: 13px;
+    font-size: 20px;
     margin-top: 0px;
     margin-right: 5px;
     margin-left: 5px;
     box-shadow: 0 0 2.5px 2.5px red;
-    height:25px;
+    height:30px;
     font-weight: 700;
     font-family: 'Varela Round', sans-serif;
     background-color:rgb(255,255,255);
@@ -67,7 +67,9 @@ body{
     margin-top: 20px;
     margin-bottom:20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width:60%;
     height: fit-content;
     border:none;
@@ -89,31 +91,34 @@ body{
 
 }
 .toggleicon{
-    width:20px;
+    max-width:20px;
     display:inline  ;
-    position: absolute;
+    /* position: absolute;
     top:18px;
-    left:30px;
+    left:30px; */
+    flex-grow: 1;
     margin-left: 35px;
     margin-right: 5px;
 }
 .deleteicon{
-    width:25px;
-    position: absolute;
+    max-width:25px;
+    flex-grow: 1;
+    /* position: absolute;
     top:15px;
-    right:8px;
+    right:8px; */
 }
 .editicon{
-    width:22px; 
-    position: absolute;
+    max-width:22px; 
+    /* position: absolute;
     top:15px;
-    right:33px;
-    margin-left: 5px;
+    right:33px; */
+    flex-grow: 1;
+    margin-right: 10px;
 }
 .content{
     font-size:20px ;
     display:inline;
-    margin-top:16px;
+    flex-grow: 4;
     font-family: 'Varela Round', sans-serif;
     
 }
@@ -163,12 +168,17 @@ body{
     }
     .searchBox{
         width:50%;
+        height:25px;
+        font-size:13px
     }
     .searchBoxnotify{
        width:50%;
+       height:25px;
+       font-size: 13px;
     }
     .emoji{
         width:150px;
+        padding-top: 30px;
        
     }
     .todos{
