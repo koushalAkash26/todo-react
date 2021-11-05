@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/todo-react/static/css/main.d0824245.chunk.css",
+    "main.css": "/todo-react/static/css/main.77810d6c.chunk.css",
     "main.js": "/todo-react/static/js/main.6c00ea69.chunk.js",
     "main.js.map": "/todo-react/static/js/main.6c00ea69.chunk.js.map",
     "runtime-main.js": "/todo-react/static/js/runtime-main.41ddb804.js",
@@ -10,7 +10,7 @@
     "static/js/3.fd371c9b.chunk.js": "/todo-react/static/js/3.fd371c9b.chunk.js",
     "static/js/3.fd371c9b.chunk.js.map": "/todo-react/static/js/3.fd371c9b.chunk.js.map",
     "index.html": "/todo-react/index.html",
-    "static/css/main.d0824245.chunk.css.map": "/todo-react/static/css/main.d0824245.chunk.css.map",
+    "static/css/main.77810d6c.chunk.css.map": "/todo-react/static/css/main.77810d6c.chunk.css.map",
     "static/js/2.d71c0d6c.chunk.js.LICENSE.txt": "/todo-react/static/js/2.d71c0d6c.chunk.js.LICENSE.txt",
     "static/media/accept.e7f61d7e.png": "/todo-react/static/media/accept.e7f61d7e.png",
     "static/media/book.af7d62fe.png": "/todo-react/static/media/book.af7d62fe.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.41ddb804.js",
     "static/js/2.d71c0d6c.chunk.js",
-    "static/css/main.d0824245.chunk.css",
+    "static/css/main.77810d6c.chunk.css",
     "static/js/main.6c00ea69.chunk.js"
   ]
 }
