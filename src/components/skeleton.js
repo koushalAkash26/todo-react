@@ -44,7 +44,9 @@ function Skeleton() {
            {!edit ?<button className={styles.button} onClick={creator}>ADD</button>:<button className={styles.button2} onClick={creator}>change</button>}
            {console.log(todos)}
            {todos.length!==0?console.log("hi"):console.log("hello")}
-          {todos.length!==0? todos.map((todo)=><div className={styles.todos} key={todo.taskid}><Icontoggler></Icontoggler><p className={styles.content}>{todo.task}</p><Cancel collection={todos} setTodos={setTodos} id={todo.taskid} setEdit={setEdit}></Cancel></div>):<div>
+          {todos.length!==0? todos.map((todo)=><div className={styles.todos} key={todo.taskid}>
+              <Icontoggler></Icontoggler><div className={styles.content}>{todo.task}</div>
+              <Cancel collection={todos} setTodos={setTodos} id={todo.taskid} setEdit={setEdit}></Cancel></div>):<div>
               <img className={styles.emoji}src={emoji} alt="think"/>
               <p className={styles.tagline}>plan your Day!!</p>
               </div>}

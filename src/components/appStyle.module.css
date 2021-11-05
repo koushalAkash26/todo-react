@@ -7,7 +7,7 @@ body{
     margin-top:100px;
     border-radius: 4px;
     background-color: rgb(55,58,93);
-    width: 700px;
+    width: 80%;
    
 }
 .mainHeading{
@@ -20,7 +20,7 @@ body{
 }
 .searchBox{
     border-radius: 5px;
-    width:250px;
+    width:30%;
     height:25px;
     font-size: 13px;
     border:none;
@@ -28,7 +28,7 @@ body{
 }
 .searchBoxnotify{
     border-radius: 5px;
-    width:250px;
+    width:30%px;
     font-size: 13px;
     height:25px;
     border:none;
@@ -66,7 +66,10 @@ body{
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom:20px;
+    display: flex;
+    flex-direction: column;
     width:60%;
+    height: fit-content;
     border:none;
     border-radius: 5px;
     background-color: rgb(255,255,255);
@@ -77,6 +80,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
 }
 
 .titleicon{
@@ -90,6 +94,8 @@ body{
     position: absolute;
     top:18px;
     left:30px;
+    margin-left: 35px;
+    margin-right: 5px;
 }
 .deleteicon{
     width:25px;
@@ -102,10 +108,12 @@ body{
     position: absolute;
     top:15px;
     right:33px;
+    margin-left: 5px;
 }
 .content{
-    padding-top: 16px;
     font-size:20px ;
+    display:inline;
+    margin-top:16px;
     font-family: 'Varela Round', sans-serif;
     
 }
@@ -118,4 +126,60 @@ body{
     font-size: 25px;
     font-weight: 700;
     color:rgb(255,255,251)
+}
+@media(max-width:600px){
+    body{
+        background-color: rgb(55,58,93);
+        
+    }
+    .mainContainer{
+        margin-top:0px;
+        border:none;
+        border-radius: 4px;
+        background-color: rgb(55,58,93);
+        width: 100%;
+        
+       
+    }
+    .headContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .titleicon{
+        width:50px;
+        display: inline;
+        padding-bottom: 20px;
+    
+    }
+    .mainHeading{
+        font-family: 'Varela Round', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        padding-top: 0px;
+
+    }
+    .searchBox{
+        width:50%;
+    }
+    .searchBoxnotify{
+       width:50%;
+    }
+    .emoji{
+        width:150px;
+       
+    }
+    .todos{
+        min-height:50px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom:20px;
+        width:80%;
+        border:none;
+        border-radius: 5px;
+        background-color: rgb(255,255,255);
+        position: relative;
+    }
 }
