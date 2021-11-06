@@ -14,10 +14,9 @@ function Skeleton() {
     const[edit, setEdit]=useState(null)
     console.log(edit)
     const updateTodo=(id)=>{
-        console.log("heheheh")
-        console.log(id)
+
         const NewTodos=todos.map((todoele)=>
-            todoele.taskid===id ? {task:todo,taskid:id} :todoele
+            todoele.taskid===id ? {task:todo,taskid:id}  :todoele
         )
         console.log(NewTodos)
         setTodos(NewTodos)
@@ -40,13 +39,15 @@ function Skeleton() {
     return (
         <div>
 
-            <input value={todo} onChange={(e)=>setTodo(e.target.value)} placeholder="enter a task" className={!edit ? styles.searchBox:styles.searchBoxnotify}></input>
+             <input value={todo} onChange={(e)=>setTodo(e.target.value)} placeholder="enter a task" className={!edit ? styles.searchBox:styles.searchBoxnotify}></input>
+     
+
            {!edit ?<button className={styles.button} onClick={creator}>ADD</button>:<button className={styles.button2} onClick={creator}>change</button>}
            {console.log(todos)}
            {todos.length!==0?console.log("hi"):console.log("hello")}
           {todos.length!==0? todos.map((todo)=><div className={styles.todos} key={todo.taskid}>
               <Icontoggler></Icontoggler><div className={styles.content}>{todo.task}</div>
-              <Cancel collection={todos} setTodos={setTodos} id={todo.taskid} setEdit={setEdit}></Cancel></div>):<div>
+              <Cancel collection={todos} setTodos={setTodos} id={todo.taskid} setEdit={setEdit} setTodo={setTodo}></Cancel></div>):<div>
               <img className={styles.emoji}src={emoji} alt="think"/>
               <p className={styles.tagline}>plan your Day!!</p>
               </div>}

@@ -3,7 +3,7 @@ import style from './appStyle.module.css';
 import close from '../images/close.png'
 import edit from '../images/edit.png'
 
-function Cancel({collection,setTodos,id,setEdit}) {
+function Cancel({collection,setTodos,id,setEdit,setTodo}) {
     function handleClose(){
         let newcollection=collection.filter((todo)=>todo.taskid!==id)
         console.log(newcollection)
@@ -12,6 +12,7 @@ function Cancel({collection,setTodos,id,setEdit}) {
     function handleEdit(){
         let newTodo=collection.find(todo=>todo.taskid===id)
         console.log(newTodo)
+        setTodo(newTodo.task)
         setEdit(newTodo)
     }
     return (
