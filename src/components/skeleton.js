@@ -12,6 +12,7 @@ function Skeleton() {
         return localData? JSON.parse(localData):[]
     })
     const[edit, setEdit]=useState(null)
+    const[status,setStatus]=useState(false)
     console.log(edit)
     const updateTodo=(id)=>{
 
@@ -24,7 +25,7 @@ function Skeleton() {
     }
     const creator=()=>{
         if(!edit){
-            setTodos([...todos,{task:todo,taskid:uuidv4()}])
+            setTodos([...todos,{task:todo,taskid:uuidv4(),taskstatus:status}])
             setTodo("")
         }
         else{
@@ -46,7 +47,7 @@ function Skeleton() {
            {console.log(todos)}
            {todos.length!==0?console.log("hi"):console.log("hello")}
           {todos.length!==0? todos.map((todo)=><div className={styles.todos} key={todo.taskid}>
-              <Icontoggler></Icontoggler><div className={styles.content}>{todo.task}</div>
+              <Icontoggler setStatus={setStatus}></Icontoggler><div className={styles.content}>{todo.task}</div>
               <Cancel collection={todos} setTodos={setTodos} id={todo.taskid} setEdit={setEdit} setTodo={setTodo}></Cancel></div>):<div>
               <img className={styles.emoji}src={emoji} alt="think"/>
               <p className={styles.tagline}>plan your Day!!</p>

@@ -4,12 +4,13 @@ import Active from "../images/accept.png";
 import style from './appStyle.module.css';
 
 
-function Icontoggler() {
+function Icontoggler({setStatus}) {
     const [active, setActive] = useState(false);
     const handleChangeActive = () => {
         setActive((status) => {
           return !status;
         });
+        setStatus(active)
       };
     return (
         <>
