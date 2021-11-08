@@ -4,13 +4,15 @@ import Active from "../images/accept.png";
 import style from './appStyle.module.css';
 
 
-function Icontoggler({setStatus}) {
+function Icontoggler({setStatus,todos}) {
     const [active, setActive] = useState(false);
     const handleChangeActive = () => {
         setActive((status) => {
           return !status;
         });
         setStatus(active)
+        const localData=localStorage.getItem('todos')
+        JSON.parse(localData)
       };
     return (
         <>

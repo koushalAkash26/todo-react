@@ -47,7 +47,7 @@ function Skeleton() {
            {console.log(todos)}
            {todos.length!==0?console.log("hi"):console.log("hello")}
           {todos.length!==0? todos.map((todo)=><div className={styles.todos} key={todo.taskid}>
-              <Icontoggler setStatus={setStatus}></Icontoggler><div className={styles.content}>{todo.task}</div>
+              <Icontoggler setStatus={setStatus} todos={todos}></Icontoggler><div className={styles.content}>{todo.task}</div>
               <Cancel collection={todos} setTodos={setTodos} id={todo.taskid} setEdit={setEdit} setTodo={setTodo}></Cancel></div>):<div>
               <img className={styles.emoji}src={emoji} alt="think"/>
               <p className={styles.tagline}>plan your Day!!</p>
