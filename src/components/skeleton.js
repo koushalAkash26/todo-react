@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import { v4 as uuidv4 } from 'uuid';
-import Icontoggler from './togglericon'
-import Cancel from './cancel'
+// import Icontoggler from './togglericon'
+// import Cancel from './cancel'
+import Segment from './segment'
 import styles from './appStyle.module.css'
 import emoji from '../images/think.gif'
 
@@ -12,7 +13,8 @@ function Skeleton() {
         return localData? JSON.parse(localData):[]
     })
     const[edit, setEdit]=useState(null)
-    const[status,setStatus]=useState(false)
+    const[state ,setState]=useState(false)
+    //  
     console.log(edit)
     const updateTodo=(id)=>{
 
@@ -25,7 +27,7 @@ function Skeleton() {
     }
     const creator=()=>{
         if(!edit){
-            setTodos([...todos,{task:todo,taskid:uuidv4(),taskstatus:status}])
+            setTodos([...todos,{task:todo,taskid:uuidv4(),taskstatus:state}])
             setTodo("")
         }
         else{
@@ -45,10 +47,10 @@ function Skeleton() {
 
            {!edit ?<button className={styles.button} onClick={creator}>ADD</button>:<button className={styles.button2} onClick={creator}>change</button>}
            {console.log(todos)}
-           {todos.length!==0?console.log("hi"):console.log("hello")}
           {todos.length!==0? todos.map((todo)=><div className={styles.todos} key={todo.taskid}>
-              <Icontoggler setStatus={setStatus} todos={todos}></Icontoggler><div className={styles.content}>{todo.task}</div>
-              <Cancel collection={todos} setTodos={setTodos} id={todo.taskid} setEdit={setEdit} setTodo={setTodo}></Cancel></div>):<div>
+              <Segment todo={todo} todos={todos} setEdit={setEdit} setTodo={setTodo} setTodos={setTodos} state={state} setState={setState}></Segment></div>):
+
+              <div>
               <img className={styles.emoji}src={emoji} alt="think"/>
               <p className={styles.tagline}>plan your Day!!</p>
               </div>}
