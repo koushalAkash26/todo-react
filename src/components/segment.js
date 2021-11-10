@@ -3,11 +3,12 @@ import Cancel from './cancel'
 import styles from './appStyle.module.css'
 import Inactive from "../images/push-pin.png";
 import Active from "../images/accept.png";
-function Segment({todo,todos,setEdit,setTodo,setTodos,state,setState}) {
-    const[active,setActive]=useState(state)
+function Segment({todo,todos,setEdit,setTodo,setTodos}) {
+    const[active,setActive]=useState(todo.taskstatus)
     const handleChangeActive=()=>{
         setActive(!active)
-        setState(!state)
+        const todosStat=todos.map((ele)=>ele.taskid===todo.taskid?{task:ele.task,taskid:ele.taskid,taskstaus:!ele.taskstatus}:{task:ele.task,taskid:ele.taskid,taskstaus:ele.taskstatus})
+        setTodos(todosStat)
     }
     return (
         <div className={styles.todoContent}>

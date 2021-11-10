@@ -13,7 +13,7 @@ function Skeleton() {
         return localData? JSON.parse(localData):[]
     })
     const[edit, setEdit]=useState(null)
-    const[state ,setState]=useState(false)
+    //const[state,setState]=useState(false)
     //  
     console.log(edit)
     const updateTodo=(id)=>{
@@ -27,7 +27,7 @@ function Skeleton() {
     }
     const creator=()=>{
         if(!edit){
-            setTodos([...todos,{task:todo,taskid:uuidv4(),taskstatus:state}])
+            setTodos([...todos,{task:todo,taskid:uuidv4(),taskstatus:false}])
             setTodo("")
         }
         else{
@@ -48,7 +48,7 @@ function Skeleton() {
            {!edit ?<button className={styles.button} onClick={creator}>ADD</button>:<button className={styles.button2} onClick={creator}>change</button>}
            {console.log(todos)}
           {todos.length!==0? todos.map((todo)=><div className={styles.todos} key={todo.taskid}>
-              <Segment todo={todo} todos={todos} setEdit={setEdit} setTodo={setTodo} setTodos={setTodos} state={state} setState={setState}></Segment></div>):
+              <Segment todo={todo} todos={todos} setEdit={setEdit} setTodo={setTodo} setTodos={setTodos} ></Segment></div>):
 
               <div>
               <img className={styles.emoji}src={emoji} alt="think"/>
