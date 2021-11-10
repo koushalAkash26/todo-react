@@ -7,7 +7,12 @@ function Segment({todo,todos,setEdit,setTodo,setTodos}) {
     const[active,setActive]=useState(todo.taskstatus)
     const handleChangeActive=()=>{
         setActive(!active)
-        const todosStat=todos.map((ele)=>ele.taskid===todo.taskid?{task:ele.task,taskid:ele.taskid,taskstaus:!ele.taskstatus}:{task:ele.task,taskid:ele.taskid,taskstaus:ele.taskstatus})
+        const todosStat=todos.map((ele)=>{
+            if(ele.taskid===todo.taskid){
+                ele.taskstatus=!ele.taskstatus
+            }
+            return ele
+        })
         setTodos(todosStat)
     }
     return (
