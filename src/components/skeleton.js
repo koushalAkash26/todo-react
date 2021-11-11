@@ -15,13 +15,13 @@ function Skeleton() {
     const[edit, setEdit]=useState(null)
     //const[state,setState]=useState(false)
     //  
-    console.log(edit)
+    
     const updateTodo=(id)=>{
 
         const NewTodos=todos.map((todoele)=>
             todoele.taskid===id ? {task:todo,taskid:id}  :todoele
         )
-        console.log(NewTodos)
+
         setTodos(NewTodos)
         setEdit("")
     }
@@ -46,7 +46,7 @@ function Skeleton() {
      
 
            {!edit ?<button className={styles.button} onClick={creator}>ADD</button>:<button className={styles.button2} onClick={creator}>change</button>}
-           {console.log(todos)}
+           
           {todos.length!==0? todos.map((todo)=><div className={styles.todos} key={todo.taskid}>
               <Segment todo={todo} todos={todos} setEdit={setEdit} setTodo={setTodo} setTodos={setTodos} ></Segment></div>):
 
