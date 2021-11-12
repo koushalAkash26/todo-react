@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { v4 as uuidv4 } from 'uuid';
-// import Icontoggler from './togglericon'
-// import Cancel from './cancel'
+
 import Segment from './segment'
 import styles from './appStyle.module.css'
 import emoji from '../images/think.gif'
